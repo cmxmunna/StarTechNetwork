@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>About Owner</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="base" rel="stylesheet">
+
+    <style type="text/css">
+        .field-validation-error {
+            color: red;
+        }
+    </style>
+    <link href="cyber_war.css" rel="stylesheet">
+    <script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-70432379-1', 'auto');
+ga('send', 'pageview');
+</script>
+    <style>
+     body {
+         margin: 0;
+         padding: 0;
+         height: 100%;
+         background-color: #efefef;
+     }
+ </style>
+
+</head>
+ <body>
+   <div>
+       <div class="text-center">
+           <div class="login-form"  style="top: 40px;">
+              <div>
+                       <div class="row">
+                           <div class="logo_space" style="float: left" >
+                               <img src="starlogo.png" height="155" width="335">
+                            </div>
+                            <br><br>
+                            
+                            <br>
+                            <div class="col-sm-8 col-xs-12">
+                                <p class="cyber_title"></p>
+                                <p class="cyber_title"></p>
+                                <blockquote>
+                                    <small class="color">--Explore Your Internet World--</small>
+                                </blockquote>
+                             <br>
+                                <tr>
+                                <td align="center" valign="middle">
+                                <form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+                                  <div class="new_font">
+                                  $(if login-by == 'trial')
+                                    Welcome free User!<br>
+                                  $(elif login-by != 'mac')
+                                    Welcome $(username)!<br>
+                                  $(endif)
+                                  <table border=1 class="status_table" >
+                                    <tr><td align="right">IP address :</td><td>$(ip)</td></tr>
+                                    <tr><td align="right">MAC address :</td><td>$(mac)</td></tr>
+                                    <tr><td align="right">Total Upload :</td><td>$(bytes-in-nice)</td></tr>
+                                    <tr><td align="right">Total Download :</td><td>$(bytes-out-nice)</td></tr>
+                                  $(if session-time-left)
+                                    <tr><td align="right">Time left :</td><td> $(session-time-left)</td></tr>
+                                  $(else)
+                                  	<tr><td align="right">Connected :</td><td>$(uptime)</td></tr>
+                                  $(endif)
+                                  $(if blocked == 'yes')
+                                  $(elif refresh-timeout)
+                                    <tr><td align="right">Status Refresh :</td><td>$(refresh-timeout)</td>
+                                  $(endif)
+                                </div>
+                                  </table>
+                                              $(if login-by-mac != 'yes')
+                                              <br>
+                                              <div class="form-group">
+                                                  <button type="submit" class="btn btn-block btn-primary p-lg-left-right" data-ng-click="logout()"> Log Off </button>
+                                              <!-- user manager link. if user manager resides on other router, replace $(hostname) by its address
+                                              <button onclick="document.location='http://$(hostname)/user?subs='; return false;">status</button>
+                                              <!-- end of user manager link -->
+                                              $(endif)
+                                              </form>
+
+                                              </td>
+                                              <br>
+                                If something wrong!!<br>
+                                Please contact with <a href="ceo.html"><i>么 Munna 么<i></a><br>
+                                  Looking for " <a href="movieserver.html">Movie Servers ?</a> "
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+<script src="base"></script>
+
+
+</body></html>

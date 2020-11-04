@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Login</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="base" rel="stylesheet">
+
+    <style type="text/css">
+        .field-validation-error {
+            color: red;
+        }
+    </style>
+    <link href="cyber_war.css" rel="stylesheet">
+    <script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-70432379-1', 'auto');
+ga('send', 'pageview');
+</script>
+    <style>
+     body {
+         margin: 0;
+         padding: 0;
+         height: 100%;
+         background-color: #efefef;
+     }
+ </style>
+
+</head>
+<body>
+  $(if chap-id)
+  	<form name="sendin" action="$(link-login-only)" method="post">
+  		<input type="hidden" name="username" />
+  		<input type="hidden" name="password" />
+  		<input type="hidden" name="dst" value="$(link-orig)" />
+  		<input type="hidden" name="popup" value="true" />
+  	</form>
+
+  	<script type="text/javascript" src="/md5.js"></script>
+  	<script type="text/javascript">
+  	<!--
+  	    function doLogin() {
+  		document.sendin.username.value = document.login.username.value;
+  		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+  		document.sendin.submit();
+  		return false;
+  	    }
+  	//-->
+  	</script>
+  $(endif)
+    <div>
+        <div class="text-center">
+            <div class="login-form"  style="top: 40px;">
+               <div>
+                        <div class="row">
+                            <div class="logo_space" style="float: left" >
+                                <img src="starlogo.png" height="155" width="335">
+                            </div>
+                            <br><br>
+                            
+                            <br>
+                            <div class="col-sm-8 col-xs-12">
+                                <p class="cyber_title"></p>
+                                <p class="cyber_title"></p>
+                                <blockquote>
+                                    <small class="color">--Explore Your Internet World--</small>          
+                                      </blockquote>
+                                  $(if trial == 'yes')<a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)"><br>
+                                <div class="img_freetrial" style="float: right;" >
+                                <img src="freetrial.gif" height="195" width="320">
+                            </div>
+                                $(endif)
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div>
+                <br>
+                    <div class="login_header">Sign in with your organizational id number.</div>
+                    <form name="login" action="$(link-login-only)" method="post"
+                         $(if chap-id) onSubmit="return doLogin()" $(endif)>
+                         <input type="hidden" name="dst" value="$(link-orig)" />
+					             	 <input type="hidden" name="popup" value="true" />
+                           <div class="form-group">
+                            <input autocomplete="off" class="form-control valid" data-val="true" data-val-required="The User Name field is required." id="username" name="UserName"  placeholder="User Name" type="text" value=""/>
+                            <span class="field-validation-valid" data-valmsg-for="UserName" data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control valid" data-val="true" data-val-required="The Password field is required." id="password" name="Password" placeholder="Password" type="password">
+                            <span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-block btn-primary p-lg-left-right" > Log In </button>
+                            $(if error)<div class="error">$(error)</div>$(endif)<br>
+                          <font color= red>  <b>NB: This is not a commercial ISP!<br>ムSoftwere test and prsonal uses onlyム<b></font>
+                        </div>
+                        <div class="login_forgotpassword"><a href="help.html">Can’t access internet?</a></div>
+             
+        <div class="copyright-text">
+            <h6>Star Tech Network Ltd™  &copy; 2020 <br/> Powered By <a target="_blank" href="https://www.facebook.com/cmxmunna/"><b>Munna Soft<b></a></h6>
+        </div><br><br>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+<script src="base"></script>
+<script type="text/javascript">
+<!--
+  document.login.username.focus();
+//-->
+</script>
+
+
+
+</body></html>
